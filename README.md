@@ -10,9 +10,9 @@ Incluye una aplicación en Streamlit donde los usuarios pueden ingresar datos y 
 ---
 
 ## Tecnologías Utilizadas
-### - Lenguaje: Python 3.11  
-### - Librerías: requirements.txt
-### - Modelos de Machine Learning: Decision Tree, Bagging, Random Forest, Gradient Boosting, XGBoost
+**Lenguaje**: Python 3.11  
+**Librerías**: requirements.txt
+**Modelos de Machine Learning**: Decision Tree, Bagging, Random Forest, Gradient Boosting, XGBoost
 
 ---
 
@@ -58,3 +58,10 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+---
+
+## Contacto
+
+**Autor**:  Pablo Guzmán Valle
+**Email**:  pabguzval@gmail.com
+**GitHub**: Pablogv00
