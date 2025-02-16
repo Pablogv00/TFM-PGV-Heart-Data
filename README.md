@@ -3,21 +3,21 @@
 # Predicción de Mortalidad por Insuficiencia Cardíaca con Machine Learning
 
 Este proyecto implementa un modelo de Machine Learning para predecir la mortalidad por insuficiencia cardíaca a partir de datos clínicos.  
-Incluye una aplicación en Streamlit donde los usuarios pueden ingresar datos y obtener predicciones.
+Incluye una aplicación en Streamlit donde los usuarios pueden ingresar datos y obtener predicciones de los modelos previamente entrenados.
 
 ## Dataset Original: [Heart Failure Clinical Records](https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data)
 
 ---
 
 ## Tecnologías Utilizadas
-Lenguaje: Python 3.11  
-Librerías: requirements.txt 
-Modelos de Machine Learning: Decision Tree, bagging, Random Forest, Gradient BoostingXGBoost
+### - Lenguaje: Python 3.11  
+### - Librerías: requirements.txt
+### - Modelos de Machine Learning: Decision Tree, Bagging, Random Forest, Gradient Boosting, XGBoost
 
 ---
 
-## Estrucutra del proyecto
-
+## Estructura del proyecto
+```markdown
  TFM-PGV-Heart-Data/
  ├── Metricas/                                      # Carpeta con métricas de rendimiento de modelos en .pkl
  ├── Modelos/                                       # Carpeta con modelos entrenados en .pkl
@@ -27,7 +27,7 @@ Modelos de Machine Learning: Decision Tree, bagging, Random Forest, Gradient Boo
  ├── README.md                                      # Este archivo con instrucciones
  ├── requirements.txt                               # Dependencias necesarias
  ├── tfm.ipynb                                      # Código de entrenamiento de modelos
-
+```
 ---
 
 ##  Instalación y Configuración
@@ -51,7 +51,7 @@ conda activate tfm_env
 pip install -r requirements.txt
 ```
 
-### 4. Ejecutar el notebook tfm.ipynb para ver el código completo de generación y entrenamiento de los modelos.
+### 4. Ejecutar el notebook *tfm.ipynb* para ver el código completo de generación y entrenamiento de los modelos.
 
 ### 5. Ejecutar la aplicación para preecir la mortalidad con datos input.
 ```bash
