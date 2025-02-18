@@ -56,7 +56,7 @@ def mostrar_matriz_y_reporte(metrica, clase):
 
     plt.subplots_adjust(wspace=0.3)  
 
-    # Mostrar en `Streamlit`
+    # Mostrar en Streamlit
     st.pyplot(fig)
 
     
@@ -71,7 +71,7 @@ st.set_page_config(
 st.title("🩺 Mortalidad por fallo cardíaco 💓")
 
 # Creación de pestañas 
-pestañas = ["🔍 Predicción", "📊 Información del Dataset", "⚙️ Modelos de Machine Learning"]
+pestañas = ["🔍 Predicción de Mortalidad", "📊 Información del Dataset", "⚙️ Modelos de Machine Learning"]
 tab1, tab2, tab3 = st.tabs(pestañas)
 
 # PESTAÑA 1: PREDICCIÓN DE MORTALIDAD
@@ -237,7 +237,8 @@ with tab3:
              """)
 
     with st.expander("🌳 Árbol de Decisión"):
-        st.write("Modelo basado en reglas de decisión simples para clasificar a los pacientes.")
+        st.write("""Modelo que divide los datos en subconjuntos en función de condiciones sobre las características. 
+                 Cada nodo del árbol representa una condición sobre una variable, y cada rama es el resultado de esa condición.""")
 
         # Cargar las métricas guardadas
         with open("Metricas/arbol_base.pkl", "rb") as file:
@@ -251,7 +252,9 @@ with tab3:
         mostrar_matriz_y_reporte(metricas, "Test")
 
     with st.expander("🌐 Bagging Classifier"):
-        st.write("Técnica de agregación basada en bootstrap para reducir la varianza.")
+        st.write("""técnica de ensamblado que mejora la estabilidad y precisión de modelos inestables, como los árboles de decisión. 
+                    Su estrategia consiste en entrenar múltiples modelos en subconjuntos de datos obtenidos mediante bootstrap 
+                    (muestreo con reemplazo) y luego combinar sus predicciones.""")
 
         # Cargar las métricas guardadas
         with open("Metricas/bagging.pkl", "rb") as file:
@@ -265,7 +268,8 @@ with tab3:
         mostrar_matriz_y_reporte(metricas, "Test")
 
     with st.expander("🌲 Random Forest"):
-        st.write("Ensemble de múltiples árboles de decisión para mayor estabilidad.")
+        st.write("""Ensamblado de múltiples árboles de decisión para mayor estabilidad. Introduce aleatorización en la selección de 
+                    características, creando múltiples árboles de decisión mas diversos y reduciendo la varianza.""")
 
         # Cargar las métricas guardadas
         with open("Metricas/random_forest.pkl", "rb") as file:
@@ -279,7 +283,8 @@ with tab3:
         mostrar_matriz_y_reporte(metricas, "Test")
     
     with st.expander("📈 Gradient Boosting"):
-        st.write("Modelo de boosting que mejora iterativamente en cada paso.")
+        st.write("""Método de ensamblado basado en boosting, donde cada nuevo árbol trata de corregir los errores de los árboles anteriores. 
+                    Se basa en minimizar el error de predicción en cada iteración.""")
 
         # Cargar las métricas guardadas
         with open("Metricas/gradient_boosting.pkl", "rb") as file:
