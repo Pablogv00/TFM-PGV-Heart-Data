@@ -53,7 +53,7 @@ pip install -r requirements.txt
 
 ### 4. Ejecutar el notebook *tfm.ipynb* para ver el código completo de generación y entrenamiento de los modelos.
 
-### 5. Ejecutar la aplicación para preecir la mortalidad con datos input.
+### 5. Ejecutar la aplicación para predecir la mortalidad con datos input.
 ```bash
 streamlit run app.py
 ```
